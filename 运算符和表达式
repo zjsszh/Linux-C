@@ -1,3 +1,22 @@
-运算符的特殊运算 逻辑运算符（&&，||)的短路特性，当&&运算符计算出0后便不在进行&&后面的计算
-逗号运算符，表达式的值就是逗号最后一项的值。
-ll的用法：#define SEC_YEAR (60LL*60LL*24LL*365LL)
+1.运算符的特殊运算 逻辑运算符（&&，||)的短路特性，当&&运算符计算出0后便不在进行&&后面的计算
+2.逗号运算符，表达式的值就是逗号最后一项的值。
+3.ll的用法：#define SEC_YEAR (60LL*60LL*24LL*365LL)
+4.scanf在循环中使用比较危险，要注意能否接收到正常有效的内容，可以使用其返回值。
+        while(1)
+     13         {
+     14                 ret=scanf("%d",&i);
+     15                 if(ret != 1)
+     16                 {
+     17                         printf("enter error!\n");
+     18                         break;
+     19                 }
+     20                 printf("i=%d\n",i);
+     21         }
+    scanf中：%s的使用是比较危险的，因为不知道存储空间的大小。
+5.抑制符
+  scanf("%d",&i);
+  scanf("%*c%c",&ch);
+  *c来吐掉一个字符。
+6.gets（）非常危险，出现越界不报错，可以用fget,getline来代替
+  No check for buffer
+       overrun is performed (see BUGS below).
