@@ -20,3 +20,10 @@
 6.gets（）非常危险，出现越界不报错，可以用fget,getline来代替
   No check for buffer
        overrun is performed (see BUGS below).
+7.使用switch case时,一定要加default，可以用来包含出错的情况。
+        case后面一定是常量或常量表达式，不能是关系表达式（如：score/10,不行)
+8.if-goto:（可以构成循环，但慎重使用：goto实现的是无条件的跳转，且不能跨函数跳转）
+9.辅助控制break与continue：break跳出的是本层循环，continue跳出的是本次循环。
+10.static int a[M],static进行初始化之后，a数组中的值均为0；
+
+
