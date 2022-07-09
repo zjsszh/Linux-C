@@ -43,7 +43,18 @@
     如：int （*p)[3];--> type name;-->int [3] *p;
  14.sizeof()与strlen()的关系：
       char str[]="hello";
+      char *str1="hello";
       printf("%d %d\n",sizeof(str),strlen(str));
+      printf("%d %d\n",sizeof(str1),strlen(str1))
       结果为6   5.
+            8   5
+ 15. 字符指针与字符数组：  
+     char str[]="hello";
+    (F)str="world";
+    (T)strcpy(str,"world");
+       char *str="hello";
+    (F)strcpy(str,"world");
+    (T)str="world";
+    
 
     
