@@ -25,5 +25,7 @@
 8.if-goto:（可以构成循环，但慎重使用：goto实现的是无条件的跳转，且不能跨函数跳转）
 9.辅助控制break与continue：break跳出的是本层循环，continue跳出的是本次循环。
 10.static int a[M],static进行初始化之后，a数组中的值均为0；
+11.求一个数组元素的个数：
+       sizeof(a)/sizeof(*a)<====>sizeof(a)/sizeof(a[0])
 
 
