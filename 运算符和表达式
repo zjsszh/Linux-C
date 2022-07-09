@@ -27,5 +27,19 @@
 10.static int a[M],static进行初始化之后，a数组中的值均为0；
 11.求一个数组元素的个数：
        sizeof(a)/sizeof(*a)<====>sizeof(a)/sizeof(a[0])
+12.指针与一维数组的关系：
+    int *p=(int [3]){1,2,3};
+    int i;
+      for(i=0;i<3;i++)
+      {
+          printf("%p-->%d\n",&p[i],p[i]);
+      }
+    twenty@twenty-virtual-machine:~/test/test1$ ./lianxi
+    0x7ffefe7054dc-->1
+    0x7ffefe7054e0-->2
+    0x7ffefe7054e4-->3
+    
+  
+
 
 
