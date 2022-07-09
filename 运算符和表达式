@@ -41,5 +41,9 @@
  
  13.数组指针：【存储类型】 数据类型 （*指针名） 【下标】 =值
     如：int （*p)[3];--> type name;-->int [3] *p;
-    
+ 14.sizeof()与strlen()的关系：
+      char str[]="hello";
+      printf("%d %d\n",sizeof(str),strlen(str));
+      结果为6   5.
+
     
