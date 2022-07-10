@@ -55,6 +55,15 @@
        char *str="hello";
     (F)strcpy(str,"world");
     (T)str="world";
-    
+ 16. const的用法：
+      int i=1;
+      int j=100;
+      int *const p = &i;
+      *p=10;
+      printf("*p=%d\n",*p);
+      printf("i=%d\n",i);
+      输出：10     10
+ 17.
+
 
     
