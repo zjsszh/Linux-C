@@ -120,7 +120,30 @@
  22.函数指针：
         类型 （*指针名） （形参）
         如：int （*P）（int）；
-        
+ 23.
+  struct simp_st
+  {
+      int i;
+      char ch;
+      float f;
+  }__attribute__((packed));
+  ------加att...结果为（2），不加为（1）-------
+  //__attribute__((packed));
+ int main()
+   {
+     struct simp_st a;
+     struct simp_st *p=&a;
+  
+     printf("sizeof(point)=%d\n",sizeof(p));
+    printf("sizeof(struct)=%d\n",sizeof(a));
+    exit(0);
+    }
+    
+ （1）sizeof(point)=8
+      sizeof(struct)=12 
+ （2）sizeof(point)=8
+      sizeof(struct)=9
+
  
 
 
