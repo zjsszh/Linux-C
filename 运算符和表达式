@@ -63,7 +63,7 @@
       printf("*p=%d\n",*p);
       printf("i=%d\n",i);
       输出：10     10
- 17.  函数：
+ 17. 函数：
       twenty@twenty-virtual-machine:~/test/function$ ./fun
       hello
       twenty@twenty-virtual-machine:~/test/function$ echo $?
@@ -75,6 +75,22 @@
       返回值为0；
       printf("hello!\n");
       返回值为7.
+      一个进程的返回值（返回状态）是给父进程看的。
+18. 函数与一维数组：
+   void print_arr(int *p,int n)
+   //void print_arr(int p[],int n)
+   ----------------------形参的形式，*p相当于p[]-------------------
+   {
+       int i;
+       printf("%s:%d\n",__FUNCTION__,sizeof(p));
+  
+      for(i=0;i<n;i++)
+          //printf("%d ",p[i]);
+          printf("%d ",*(p+i));
+          ---------p[i]相当于*(p+i)----------
+      printf("\n");
+      return ;
+  }
 
 
     
