@@ -92,8 +92,8 @@
       return ;
   }
 19.函数与二维数组：
-  6 //void print_arr1(int p[][N],int m,int n)
-  7 void print_arr1(int (*p)[N],int m,int n)
+  6 //void print_arr1(int p[][N],int m,int n)  
+  7 void print_arr1(int (*p)[N],int m,int n)   //int (*p)[N]为数组指针。
   -----------上面俩作为形参可以替换----------
   8 {
   9     int i,j;
@@ -110,6 +110,10 @@
  19     }
  20 
  21 }
+ 20.二维数组a[M][N]如果想作为一个大数组(一维数组）用，传参的话，用&a[0][0]或者*a.
+    二维数组a[M][N]如果想作为行指针传参用的话，用a。
+ 21.
+ 
 
 
     
