@@ -63,7 +63,18 @@
       printf("*p=%d\n",*p);
       printf("i=%d\n",i);
       输出：10     10
- 17.
+ 17.  函数：
+      twenty@twenty-virtual-machine:~/test/function$ ./fun
+      hello
+      twenty@twenty-virtual-machine:~/test/function$ echo $?
+      0
+      echo $?是上一条执行命令的返回值。
+      ------------------------------------
+      printf("hello!\n");
+      return 0
+      返回值为0；
+      printf("hello!\n");
+      返回值为7.
 
 
     
