@@ -91,6 +91,25 @@
       printf("\n");
       return ;
   }
+19.函数与二维数组：
+  6 //void print_arr1(int p[][N],int m,int n)
+  7 void print_arr1(int (*p)[N],int m,int n)
+  -----------上面俩作为形参可以替换----------
+  8 {
+  9     int i,j;
+ 10     printf("sizeof(p)=%d\n",sizeof(p));
+ 11 
+ 12     for(i=0;i<m;i++)
+ 13     {
+ 14         for(j=0;j<n;j++)
+ 15            // printf("%4d ",p[i][j]);
+ 16             printf("%4d ",*(*(p+i)+j));
+        -----------上面俩可以进行替换---------------
+ 17         printf("\n");
+ 18 
+ 19     }
+ 20 
+ 21 }
 
 
     
