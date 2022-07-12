@@ -147,7 +147,8 @@
 25.free后进行空指针赋值，防止野指针污染存储内存，
      free(p);
      p=NULL;
-26
+26.typedefy int ARR[6];   --->   int [6]->ARR;
+   ARR a;----> int a[6];
 
 
 
