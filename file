@@ -1,1 +1,25 @@
 I/O
+stdio 标准IO
+sysio 系统调用IO（文件IO）
+stdio:FILE类型
+1.fopen();
+
+
+
+fclose();
+fgetc();
+fputc();
+fgets();
+fputs();
+fread();//数据块的操作
+fwrite();
+
+printf();
+scanf();
+文件位置指针相关
+fseek();
+ftell();
+rewind();
+
+fflush();
+
