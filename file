@@ -34,18 +34,34 @@ getline();
 fd是文件IO中贯穿始终的类型
 文件描述符的概念（整型数，数组的下标，文件描述符优先使用当前可用范围最小的）
 文件IO的操作：open,close,read,write,lseek
-文件IO与标准IO的区别
+文件IO与标准IO的区别：
+        文件IO响应速度快，标准IO吞吐量大
+        标准IO和文件IO不能混用。
+        转换：fileno，fdopen
 IO的效率问题
-文件共享
-原子操作
-程序中的重定向：dup,dup2
+        习题
+文件共享：多个任务共同操作一个文件或者协同完成任务
+        面试：写程序删除一个文件的第10行。
+        1->open r ->fd1 ->lseek 11
+        2->open r+ ->fd2 ->lseek 10
+        while()
+        {
+         1->fd1->read
+         2->fd2->write
+        }
+        补充函数：truncate/ftruncate
+        
+原子操作:不可分割的操作
+        作用：解决竞争和冲突
+        如：tmpnam不原子
+程序中的重定向：dup,dup2（原子操作）
 同步：sync,fsync,fdatasync
 fcntl();
 ioctl();
 /dev/fd/目录：
 
-
-
+重载：重载就是在一个类中，有相同的函数名称，但形参不同的函数
+变参：printf的实现
 
 
 
