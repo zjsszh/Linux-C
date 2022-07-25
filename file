@@ -2,6 +2,7 @@ I/O
 stdio 标准IO
 sysio 系统调用IO（文件IO）
 stdio:FILE类型
+标准io:
 1.fopen();
 
 
@@ -22,4 +23,42 @@ ftell();
 rewind();
 
 fflush();
+
+getline();
+临时文件：1.如何不冲突  2.及时销毁
+创建临时文件的函数：        
+        tmpnam
+        tmpfile
+
+文件io/系统调用io:
+fd是文件IO中贯穿始终的类型
+文件描述符的概念（整型数，数组的下标，文件描述符优先使用当前可用范围最小的）
+文件IO的操作：open,close,read,write,lseek
+文件IO与标准IO的区别
+IO的效率问题
+文件共享
+原子操作
+程序中的重定向：dup,dup2
+同步：sync,fsync,fdatasync
+fcntl();
+ioctl();
+/dev/fd/目录：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
