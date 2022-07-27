@@ -112,6 +112,18 @@ ioctl()：设备相关的内容
     
     
 二、系统数据文件和信息
+    1.   /etc/password
+        getpwuid();
+        getpwnam();
+    2.   /etc/group
+        getgrid();
+        getgrnam();
+    3.   /etc/shadow
+        getspnam();
+        crypt();
+        getpass();
+    4.   时间戳
+    
 
 三、进程环境
 
