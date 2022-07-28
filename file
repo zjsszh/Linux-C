@@ -122,11 +122,42 @@ ioctl()：设备相关的内容
         getspnam();
         crypt();
         getpass();
-    4.   时间戳
-    
+        
+        //注意（待解决问题）：chkpass.c:(.text+0x95): undefined reference to `crypt'
 
+    4.   时间戳:time_t(计算机)    char *(人类)  struct tm(程序员) 
+    	time（）；
+        gmtime();
+        localtime();
+        
+        mktime();
+        
+        strftime();
+        
+        
+        
+	
 三、进程环境
-
+1.main()函数
+    int main(int argc,char *argv[]);
+2.进程的终止
+    正常终止：
+        从main函数返回return 0
+        调用exit（）
+        调用_exit或者_Exit（与exit()的区别，什么都不敢动，不敢刷新IO，不敢调用钩子函数的时候用）
+        最后一个线程从其启动例程返回
+        最后一个线程调用pthread_exit
+    异常终止：
+        调用abort
+        接到一个信号并终止
+        最后一个线程对其取消请求做出响应
+    atexit():钩子函数
+3.命令行参数
+4.环境变量
+5.C程序的存储空间布局
+6.库
+7.函数跳转
+8.资源的获取及控制
 
 
 
