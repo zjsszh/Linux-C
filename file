@@ -156,9 +156,26 @@ ioctl()：设备相关的内容
 	getopt();
 	getopt_long();
 4.环境变量
+	KEY=VALUE
+	getenv();
+	setenv();
+	putenv();
 5.C程序的存储空间布局
+	pmap(1)
 6.库
+	1.动态库
+	2.静态库
+	3.手工装载库:内核中模块的实现
+	dlopen();
+	dlclose();
+	dlerror();
+	dlsym();
+	
 7.函数跳转
+	(goto不能够实现跨函数跳转)
+	下面两个函数为了解决goto的不安全性：
+	setjmp();
+	longjump();
 8.资源的获取及控制
 
 
