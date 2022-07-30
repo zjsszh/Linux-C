@@ -39,8 +39,22 @@
     execv();
     execvp();
     注意：fflush()的使用。
-5.用户权限及组权限
+5.用户权限及组权限(u+s,g+s)
+    u+s:当别的用户在调用当前可执行文件的时候，身份会切换到当前二进制文件的user身份执行。
+    g+s:当别的用户在调用当前可执行文件的时候，身份会切换到当前二进制文件的同组user身份执行。
+    getuid();
+    geteuid();
+    getgid();
+    getegid();
+    setuid();
+    setgid();
+    setreuid();
+    setregid();
+    seteuid();
+    setegid();
 6.解释器文件
+    脚本文件
+    标志：#！
 7.system();
 8.进程会计：统计进程所占资源量
 9.进程时间
