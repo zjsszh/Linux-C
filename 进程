@@ -57,11 +57,28 @@
     标志：#！/bin/bash(解释器文件)
 7.system();
     理解：fork+exec+wait封装
-    
 8.进程会计：统计进程所占资源量
+    acct(const char *filename);//结束进程的相关信息放到file中去。
 9.进程时间
-
+    times();
 10.守护进程
+    会话 session,标识sid
+    守护进程特点：PPID；1;PID,PGID,SID相同；TTY：？
+    终端
+    setsid();
+    getpgrp();
+    getpgid();
+    setpgid();
+    单实例守护进程：锁文件 /var/run/name.pid
+    启动脚本文件：/etc/rc*
 11.系统日志
+    syslogd服务
+    openlog();
+    syslog();
+    closelog();
+
+
+
+
 
 
