@@ -89,9 +89,16 @@
     信号的响应依赖于中断。
     
 2.signal();
+   void signal(int signum,void (*func)(int))(int);
+   信号会打断阻塞的系统调用。
 3.信号的不可靠
+    信号的行为不可靠，信号的执行现场由内核来布置
 4.可重入函数
+    为了解决信号不可靠
+    所有的系统调用都是可重入的，一部分库函数也是可重入的，如：memcpy(Yes),localtime(NO),localtime_r(Yes);rand(NO),rand_r(Yes);
+    尤其返回值是指针的要注意。
 5.信号的相应过程
+    
 6.信号常用函数
     kill();
     raise();
