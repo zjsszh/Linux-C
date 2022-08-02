@@ -113,6 +113,7 @@
     alarm();
     
     pause();
+        不让cpu忙等，减少cpu使用率。
     abort();
     system();
     sleep();
