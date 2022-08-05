@@ -186,8 +186,19 @@
         2）线程可以被同一进程中的其他线程取消
         3）线程调用pthread_exit()函数，当前线程的结束。
     pthread_join() -->  wait();
-  栈的清理
+  栈的清理//这两个成对出现，他是一个宏，只写一个会报语法错误；
+    pthread_cleanup_push();
+    pthread_cleanup_pop();
   线程的取消选项
+    线程取消：pthread_cancel();
+    取消有2种状态：允许和不允许
+    允许取消又分为：异步cancel,推迟cancel（默认）->推迟至cancel点
+    cancel点：POSIX定义的cancel点，都是可能引发阻塞的系统调用
+    pthread_setcancelstate()：设置是否允许取消
+    pthread_setcanceltype():设置取消方式
+    pthread_testcancel():本函数什么都不做，就是一个取消点
+  线程分离
+    pthread_detach();---->已经被detach的函数不能被join（终止）
 3.线程同步
 4.线程属性
   线程同步的属性
