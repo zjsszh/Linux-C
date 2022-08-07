@@ -213,6 +213,7 @@
             pthread_cond_broadcast();
             pthread_cond_signal();
             pthread_cond_wait();
+    信号量：
 4.线程属性
   线程同步的属性
 5.重入
