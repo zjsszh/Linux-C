@@ -243,7 +243,7 @@
     
   线程与fork
   openmp线程标准 --> www.OpenMP.org  
-6.
+
 
 
 -----------shell记录---------
@@ -251,9 +251,18 @@ twenty@twenty-virtual-machine:~$ echo 1 > /tmp/out
 twenty@twenty-virtual-machine:~$ cat /tmp/out
 1
 
+******高级IO********
+非阻塞IO（尝试）---阻塞IO（死心眼）
+补充：有限状态机编程
 
-
-
+1.非阻塞IO
+    简单流程：自然流程是结构化的
+    复杂流程：自然流程不是结构化的
+    
+2.IO多路转接
+3.其他读写函数
+4.存储映射IO
+5.文件锁
 
 
 
