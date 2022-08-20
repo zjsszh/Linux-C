@@ -259,7 +259,12 @@ twenty@twenty-virtual-machine:~$ cat /tmp/out
     简单流程：自然流程是结构化的
     复杂流程：自然流程不是结构化的
     
-2.IO多路转接
+2.IO多路转接(文件描述符的监视)
+    select();//古老，移植性很好
+    poll();
+    epoll();//方言
+    
+    //复习：关于sleep不靠谱，是因为一些平台对sleep的封装是用alarm,不能出现两个时钟。
 3.其他读写函数
 4.存储映射IO
 5.文件锁
